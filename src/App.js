@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import Counter from './components/Counter';
 
@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Counter />
+        <Counter counterInit={50} counterIncrement={10}/> <br/>
       </div>
     );
   }
