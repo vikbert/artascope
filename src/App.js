@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-
-import Counter from './components/Counter';
+import './view/index.css';
+import CounterDialog from './components/CounterDialog';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Counter counterInit={50} counterIncrement={10}/> <br/>
+        <CounterDialog/>
       </div>
     );
   }
