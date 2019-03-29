@@ -69,7 +69,7 @@ class Githubcards extends Component {
     const newUsers = {...this.state.usersData};
     newUsers[user.id] = user;
 
-    this.setState({usersData: newUsers});
+    this.setState({usersData: newUsers, textInput: ''});
   };
 
   render() {
