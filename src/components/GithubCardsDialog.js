@@ -1,17 +1,17 @@
 import React from 'react';
 import ResponsiveDialog from './ResponsiveDialog'
 import AppCard from "./MaterialCard";
-import CounterDemo from "./apps/Counter";
+import GithubCardsDemo from "./apps/Githubcards";
 
 const card = {
-  title: 'Reactive Counter',
-  description: 'Simple reactive counter with react.js',
-  date: '2019-03-28',
+  title: 'GitHub Cards',
+  description: 'Search and add github user to the list',
+  date: '2019-03-29',
 };
 
 const CounterDialog = () => {
   const appCard = <AppCard title={card.title} description={card.description} date={card.date}/>;
-  const appDemo = <CounterDemo counterIncrement={5} counterInit={50}/>;
+  const appDemo = <GithubCardsDemo/>;
 
   return (
     <section id="cd-timeline" className="cd-container">
