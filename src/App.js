@@ -3,6 +3,8 @@ import './view/index.css';
 import AppBar from './components/AppBar'
 import CounterDialog from './components/CounterDialog';
 import GithubCardsDialog from './components/GithubCardsDialog';
+import ReactTodoDialog from "./components/ReactTodoDialog";
+import ReduxTodoDialog from "./components/ReduxTodoDialog";
 
 class App extends Component {
   render() {
@@ -11,6 +13,8 @@ class App extends Component {
         <AppBar/>
         <CounterDialog/>
         <GithubCardsDialog />
+        <ReduxTodoDialog />
+        <ReactTodoDialog />
       </div>
     );
   }

@@ -7,7 +7,7 @@ const card = new CardData (
   'GitHub Cards',
   'Search and add github user to the list',
   '2019-03-29',
-  'https://images.unsplash.com/photo-1503739171234-327ce271626f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+  'https://images.unsplash.com/photo-1545152423-57a801859a35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
   undefined
 );
 
