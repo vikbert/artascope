@@ -88,7 +88,6 @@ class ResponsiveDialog extends React.Component {
 
 ResponsiveDialog.propTypes = {
   fullScreen: PropTypes.bool,
-  appCard: PropTypes.object.isRequired,
   appDemo: PropTypes.object.isRequired,
   card: PropTypes.object.isRequired,
 };
