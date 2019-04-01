@@ -31,7 +31,7 @@ function ButtonAppBar(props) {
             <MenuIcon/>
           </IconButton>
           <Typography variant="h6" color="inherit" className={classes.grow}>
-            React Demos
+            My React Coding Dojo
           </Typography>
           <IconButton color="inherit" target="_blank" href="https://github.com/vikbert">
             <AccountIcon/>
