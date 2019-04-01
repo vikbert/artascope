@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -37,7 +37,7 @@ const styles = theme => ({
 });
 
 function MaterialCard(props) {
-  const { classes, cardData, onClickOpenDemo } = props;
+  const {classes, cardData, onClickOpenDemo} = props;
 
   return (
     <Card className={classes.card}>
@@ -59,9 +59,12 @@ function MaterialCard(props) {
           </Typography>
         </CardContent>
         <div className={classes.controls}>
-          <Button size="small" color="primary" onClick={onClickOpenDemo}>
-            Live Demo
-          </Button>
+          {cardData.external ? (
+              <a href={cardData.external} target='_blank' rel='noreferrer noopener'>
+                <Button size="small" color="primary">Live Demo on external Link</Button>
+              </a>) : (
+              <Button size="small" color="primary" onClick={onClickOpenDemo}>Live Demo</Button>)
+          }
         </div>
       </div>
     </Card>
@@ -71,7 +74,7 @@ function MaterialCard(props) {
 MaterialCard.propTypes = {
   classes: PropTypes.object.isRequired,
   cardData: PropTypes.instanceOf(CardData),
-  onClickOpenDemo: PropTypes.func.isRequired,
+  onClickOpenDemo: PropTypes.func,
 };
 
-export default withStyles(styles, { withTheme: true })(MaterialCard);
+export default withStyles(styles, {withTheme: true})(MaterialCard);
