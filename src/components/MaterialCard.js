@@ -36,7 +36,7 @@ const styles = theme => ({
 });
 
 function MaterialCard(props) {
-  const { classes, theme, title, description, date } = props;
+  const { classes, title, description, date } = props;
 
   return (
     <Card className={classes.card}>
@@ -69,7 +69,6 @@ function MaterialCard(props) {
 
 MaterialCard.propTypes = {
   classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
