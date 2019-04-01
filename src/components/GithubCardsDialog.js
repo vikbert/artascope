@@ -3,12 +3,12 @@ import ResponsiveDialog from './common/ResponsiveDialog';
 import GithubCardsDemo from "./apps/Githubcards";
 import CardData from "./common/CardData";
 
-const card = new CardData (
+const card = new CardData(
   'GitHub Cards',
   'Search and add github user to the list',
   '2019-03-29',
-  'https://images.unsplash.com/photo-1545152423-57a801859a35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-  undefined
+  'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+  undefined,
 );
 
 const CounterDialog = () => {

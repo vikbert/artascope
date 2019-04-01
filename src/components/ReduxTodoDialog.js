@@ -7,7 +7,7 @@ const card = new CardData(
   'Redux Todo',
   'Simple Todo built with react redux',
   '2019-03-20',
-  'https://images.unsplash.com/photo-1546623381-d6d69cd69955?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
   'https://mit-todo-react.netlify.com/',
 );
 
