@@ -36,13 +36,13 @@ const styles = theme => ({
 });
 
 function MaterialCard(props) {
-  const { classes, title, description, date } = props;
+  const { classes, title, description, date, image, onClickOpenDemo } = props;
 
   return (
     <Card className={classes.card}>
       <CardMedia
         className={classes.cover}
-        image="https://images.unsplash.com/photo-1444201716572-c60ec66d0494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80"
+        image={image}
         title="Live from space album cover"
       />
       <div className={classes.details}>
@@ -58,7 +58,7 @@ function MaterialCard(props) {
           </Typography>
         </CardContent>
         <div className={classes.controls}>
-          <Button size="small" color="primary">
+          <Button size="small" color="primary" onClick={onClickOpenDemo}>
             Live Demo
           </Button>
         </div>
@@ -72,6 +72,8 @@ MaterialCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  onClickOpenDemo: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(MaterialCard);

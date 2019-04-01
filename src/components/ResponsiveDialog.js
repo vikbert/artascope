@@ -8,6 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import withMobileDialog from '@material-ui/core/withMobileDialog';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
+import AppCard from './MaterialCard';
 
 const DialogTitle = withStyles(theme => ({
   root: {
@@ -57,12 +58,17 @@ class ResponsiveDialog extends React.Component {
   };
 
   render() {
-    const {fullScreen, appCard, appDemo, appTitle} = this.props;
+    const {fullScreen, appDemo, card} = this.props;
 
     return (
       <div>
-        <div className="card" onClick={this.handleClickOpen}>
-          {appCard}
+        <div className="card">
+          <AppCard
+            title={card.title}
+            description={card.description}
+            date={card.date} image={card.image}
+            onClickOpenDemo={this.handleClickOpen}
+          />
         </div>
         <Dialog
           fullScreen={fullScreen || false}
@@ -70,7 +76,7 @@ class ResponsiveDialog extends React.Component {
           onClose={this.handleClose}
           aria-labelledby="responsive-dialog-title"
         >
-          <DialogTitle id="responsive-dialog-title" onClose={this.handleClose}>{appTitle}</DialogTitle>
+          <DialogTitle id="responsive-dialog-title" onClose={this.handleClose}>{card.title}</DialogTitle>
           <DialogContent>
             {appDemo}
           </DialogContent>
@@ -82,9 +88,9 @@ class ResponsiveDialog extends React.Component {
 
 ResponsiveDialog.propTypes = {
   fullScreen: PropTypes.bool,
-  appTitle: PropTypes.string.isRequired,
   appCard: PropTypes.object.isRequired,
   appDemo: PropTypes.object.isRequired,
+  card: PropTypes.object.isRequired,
 };
 
 export default withMobileDialog()(ResponsiveDialog);
